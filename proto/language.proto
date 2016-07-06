@@ -1,0 +1,27 @@
+package knock-knock;
+
+message Language {
+    optional string name = 1;
+
+    enum ProficiencyType {
+        ORAL = 0;
+        READING = 1;
+        WRITING = 2;
+    }
+
+    enum ProficiencyLevels {
+        NONE = 0;
+        ELEMENTARY = 1;
+        LIMITED_WORKING = 2;
+        GENERAL_PROFESSIONAL = 3;
+        ADVANCED_PROFESSIONAL = 4;
+        NATIVE = 5;
+    }
+
+    message Proficiency {
+        optional ProficiencyType type = 1;
+        optional ProficiencyLevel level = 2;
+    }
+
+    repeated Proficiency proficiency = 2;
+}

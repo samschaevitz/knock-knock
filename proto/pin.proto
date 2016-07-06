@@ -1,0 +1,9 @@
+package knock-knock;
+
+message Pin {
+    optional Location location = 1; // where
+    optional int64 start_date = 2; // when
+    optional int64 end_date = 3; // when
+    repeated string purpose = 4; // why
+    repeated Photo photos = 5; // any pics?
+}

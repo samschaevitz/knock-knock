@@ -1,0 +1,11 @@
+package knock-knock;
+
+message Location {
+    optional double latitude = 1;
+    optional double longitude = 2;
+    optional string display_name = 3;
+    optional Photo flag = 5;
+    optional Photo key_photo = 4;
+    optional int32 population = 5;
+    optional string dominant_language = 6;
+}

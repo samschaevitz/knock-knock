@@ -1,0 +1,25 @@
+package knock-knock;
+
+message User {
+    // private account state
+    optional int64 UID = 1; // globally unique identifier for the user
+    optional Credentials credentials = 2; // OAuth state, password hash
+    repeated Organization affiliation = 3; // organizations with which this user is affiliated
+    repeated Invite invites_sent = 4;
+
+    // required for global display info
+    optional string email_address = 5; // for password resets, invites, etc.
+    optional string display_name = 6; // shown across the site to other users
+    optional string family_name = 7; // optionally shown across the site
+    optional string given_name = 8; // optionally shown across the site
+
+    // optional
+    repeated Pin pins = 8; // location pins associated with this user
+    optional Photo profile_photo = 10; // photo to be used across the site for the user
+
+    // additional info for public profile
+    repeated string external_links = 11; // fb, linkedin, instagram, etc.
+    repeated Location home_base  = 12; // where are you now that i need ya?
+    repeated Language languages = 13; // which languages do you know?
+    repeated string field = 14; // what do you do with your time?
+}

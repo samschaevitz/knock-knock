@@ -1,0 +1,6 @@
+package knock-knock;
+
+message Organization {
+    optional int64 UID = 1; // globally unique indenfier for the organization
+    optional string display_name = 2;
+}
